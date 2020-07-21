@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>File Browser</h1>
+    <a href="{{ url_for('uploads') }}">Uploads</a> /
+    <a href="{{ url_for('manage_file') }}">Manage</a>
+    <hr>
+
+    <p>URL: {{ file_url }}</p>
+
+{% endblock %}

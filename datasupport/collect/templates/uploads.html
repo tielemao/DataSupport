@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>IT数据支持系统</h1>
+    <h2>上传excel文件，用于之后读取相关文件采集数据填入GoogleSheets中。</h2>
+    <hr>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <hr>
+      <input type=submit value="上传">
+    </form>
+{% endblock %}

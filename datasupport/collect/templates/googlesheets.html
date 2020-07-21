@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>IT数据支持系统</h1>
+    <h3>读取相关文件采集数据填入GoogleSheets中</h3>
+    <hr>
+    <form method=post enctype=multipart/form-data>
+      <p style="font-family:courier">手动选择源数据表格文件一：招聘数据统计表</p>
+      <input type=file name=file>
+      <hr>
+      <p style="font-family:courier">手动选择源数据表格文件二：阶段通过情况</p>
+      <input type="file" name="file2">
+      <hr>
+      <p style="font-family:courier">输入datasupport@topgamesinc.com帐户中拥有的GooeleSheets表格文件名，默认为"IT数据支持系统"</p>
+      <input type="text" name="tables_name" value="IT数据支持系统" >
+      <hr>
+      <p style="font-family:courier">输入sheet页，按索引取，0为第一页</p>
+      <input type="number" name="sheet_num" value="0">
+      <hr>
+      <p style="font-family:courier">点击执行后，上方刷新出json格式的提示则表示GoogleSheets中的相应表格更新数值完成</p>
+      <input type=submit value="执行导入">
+    </form>
+{% endblock %}

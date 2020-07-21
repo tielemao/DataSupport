@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>IT数据支持系统</h1>
+    <h3>读取HR相关Mock表格采集数据填入GoogleSheets相应的报表中</h3>
+    <hr>
+    <form method=post enctype=multipart/form-data>
+      <p style="font-family:courier">月报表一：月招聘数据统计表</p>
+      <input type=file name=data_xlsx>
+      <hr>
+      <p style="font-family:courier">月报表二：月阶段通过情况表</p>
+      <input type=file name=pass_xlsx>
+      <hr>
+      <p style="font-family:courier">datasupport@topgamesinc.com帐户中拥有的GooeleSheets表格文件名，默认为"IT数据支持系统"</p>
+      <input type="text" name="tables_name" value="IT数据支持系统" >
+      <hr>
+      <p style="font-family:courier">月报sheet页名称，默认"data-monthly"</p>
+      <input type="text" name="month_sheet_name" value="data-monthly">
+      <hr>
+      <p style="font-family:courier">点击执行后，上方刷新出json格式的返回值则表示GoogleSheets中的相应表格更新数值完成</p>
+      <input type=submit value="执行导入">
+    </form>
+{% endblock %}
