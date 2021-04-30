@@ -40,7 +40,7 @@ six==1.12.0
 SQLAlchemy==1.3.2
 tzlocal==2.0.0
 uritemplate==3.0.0
-urllib3==1.25.6
+urllib3==1.25.8
 visitor==0.1.3
 Werkzeug==0.15.2
 WTForms==2.2.1
